@@ -1,0 +1,54 @@
+# 定义两个整数变量 python_score、c_score，编写代码判断成绩要求只要一门大于60就算及格
+python_score = int(input("你的python成绩为："))
+c_score = int(input("你的c成绩为："))
+if python_score >= 60 or c_score >= 60 :
+    print("成绩合格")
+else :
+    print("成绩不合格")
+# 定义一个布尔型变量 is_employee，编写代码判断是否是本公司员工
+is_employee = True
+if not is_employee :
+    print("禁止入内")
+oliday_name = str(input("现在的节日是（情人节/平安夜/生日）："))
+if holiday_name == "情人节":
+    print("买玫瑰")
+    print("看电影")
+elif holiday_name == "平安夜":
+    print("买苹果")
+    print("吃大餐")
+elif holiday_name == "生日":
+    print("买礼物")
+    print("吃蛋糕")
+else:
+    print("每天都是节日")
+# 定义布尔型变量has_ticket表示是否有车票
+# 定义整型变量knife_length表示刀的长度，单位：厘米
+# 先检查有车票，有车票进行安检
+# 超过20cm提示刀的长度，不允许上车
+# 不错过20cm可以上车
+# 没有车票禁止入门
+has_ticket = True
+knife_length = 21.5477
+if has_ticket:
+    print("车票案件通过，准备安检")
+    if knife_length > 20:
+        print("刀长达到%.2f公分，禁止上车" % knife_length)
+    else:
+        print("请上车")
+else:
+    print("没有车票禁止入内")
+# 出拳石头1剪刀2布3
+# 电脑随机出拳
+# 比较胜负
+import random
+our_hand = int(input("请出拳——石头（1）/剪刀（2）/布（3）："))
+robot = random.randint(1, 3)
+print("我出的是拳头是%d,电脑出的是%d" % (our_hand , robot))
+if robot == our_hand:
+    print("平局")
+elif ((robot == 1 and our_hand == 3)
+        or (robot == 2 and our_hand == 1)
+        or (robot == 3 and our_hand == 2)):
+    print("我赢了")
+else:
+    print("你输了")
