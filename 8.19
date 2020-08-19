@@ -14,3 +14,62 @@ while i <= 100:
     print("从1加到%d,和为%d" % (i, sum))
     i += 1
     
+# 计算0-100所有偶数的和
+# 编写循环，确定要计算的数字
+# 添加结果变量，在循环内部 中处理计算结果
+i = 0
+result = 0
+while i <= 100:
+    if i % 2 == 0:
+        result += i
+    i += 1
+print("0-100所有偶数的和为%d" % result)
+
+# break以及continue使用
+i = 0
+while i < 10:
+    if i == 5:
+    
+    
+        i += 1
+        # 注意continue执行时，注意调整循环计数是否调整，否则可能导致死循环
+        continue
+    if i == 8:
+        # break满足某一条件，跳出循环，不再执行后续重复代码
+        break
+    print(i)
+    i += 1
+print("over")
+
+"""
+用嵌套语句
+连续输出五行*
+*
+**
+***
+****
+*****
+"""
+row = 1
+while row <= 5:
+    col = 1
+    while col <= row:
+        print("*",end="")
+        col += 1
+    print("")
+    row += 1
+
+# 输出九九乘法表
+row = 1
+col = 1
+while row < 10:
+# 首先行九行确定
+    col = 1
+    while col <= row:
+        result = row * col
+        #\t可以对齐
+        print(f'{col}*{row}={result}\t',end="")
+        # print("%d*%d=%d\t" %(col,row,result),end="")
+        col += 1
+    print("")
+    row += 1
