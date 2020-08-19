@@ -75,7 +75,8 @@ while row < 10:
     row += 1
 
 # 一个新的知识\r，可以覆盖这一行的前面，可以做倒计时等功能
-i =0
-while i <= 1000000:
-    print(f'\ri={i}',end='')
-    i += 1
+# 显示倒计时
+import time
+for i in range(10):
+    print("\r离程序退出还剩%s秒" % (9-i), end="")
+    time.sleep(1)
