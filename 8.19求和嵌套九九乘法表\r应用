@@ -73,3 +73,9 @@ while row < 10:
         col += 1
     print("")
     row += 1
+
+# 一个新的知识\r，可以覆盖这一行的前面，可以做倒计时等功能
+i =0
+while i <= 1000000:
+    print(f'\ri={i}',end='')
+    i += 1
