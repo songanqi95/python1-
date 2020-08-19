@@ -1,0 +1,16 @@
+# 打印5遍hello python
+# 定义一个整数变量，输出循环次数
+i = 0
+while i < 5:
+    print("hello python")
+    i = i + 1
+print("一共循环了%d次" % i)
+
+#计算1-100的和
+i = 0
+sum = 0
+while i <= 100:
+    sum += i
+    print("从1加到%d,和为%d" % (i, sum))
+    i += 1
+    
