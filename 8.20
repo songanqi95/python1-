@@ -5,3 +5,56 @@ def sum_2_number(num_a,num_b):
 
 
 sum_2_number(5.25, 6.14654321)
+
+_______________________________________________________________________
+def sum_2_number(num_a,num_b):
+    """两个数字求和"""
+    c = num_a + num_b
+# 使用返回值，告诉调用函数的结果
+    return c
+# return下方代码不会被执行
+
+
+result = sum_2_number(5.25, 6.14654321)
+print(f'和为{result}')
+
+_______________________________________________________________________
+# 嵌套函数运用
+def test1():
+    print("*" * 50)
+
+
+def test2():
+    print("=" * 50)
+    test1()
+    print("=" * 50)
+
+test2()
+
+_______________________________________________________________________
+# 打印分割线,可以改变分隔符及次数、行数（封装保持不动，使用嵌套函数）
+def print_line(char, times):
+    """打印单行分割线
+
+    :param char: 分隔符类型
+    :param times: 分隔符次数
+    """
+    print(char * times)
+
+
+def print_row(rows, char, times):
+    """确定行数，类型及次数
+
+    :param rows: 行数
+    :param char: 类型
+    :param times: 次数
+    """
+    i = 0
+    while i < rows:
+        print_line(char, times)
+        i += 1
+
+
+print_row(5, "-", 20)
+
+
