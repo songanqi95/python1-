@@ -58,12 +58,15 @@ def print_row(rows, char, times):
 print_row(5, "-", 20)
 
 _______________________________________________________________________
+
 # 列表的定义
-name_list = ["a", "b", "c", "d"]
+name_list = ["a", "c", "b", "d"]
 # 1. 取值和取索引
 print(name_list[1])
 # 知道数据内容知道数据位置
 print(name_list.index("b"))
+
+print(len(name_list))
 # 2. 修改
 name_list[0] = "-a"
 print(name_list)
@@ -81,11 +84,27 @@ print(name_list)
 name_list.remove("lll")
 # 删除确定值
 print(name_list)
-name_list.pop(5)
-# 删除索引位置值,()默认删除最后一个
+del name_list[0]
 print(name_list)
-name_list.clear()
+name_list.pop(5)
+# 删除索引位置值
+print(name_list)
+# name_list.clear()
 # 全清空
 print(name_list)
+# 升序降序
+name_list.sort()
+print(name_list)
+name_list.sort(reverse=True)
+print(name_list)
+name_list.reverse()
+print(name_list)
 
+_______________________________________________________________________
+name_list = ["赵", "钱", "孙", bool()]
+# 使用迭代遍历列表
+for my_name in name_list:
+
+    print(f'我的名字是{my_name}')
+    
 _______________________________________________________________________
