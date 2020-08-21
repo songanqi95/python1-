@@ -1,0 +1,22 @@
+# 元组用（），不可修改
+numb_tuple = (1, 2, 3, 4)
+print(type(numb_tuple))
+# 列表用[]，可修改
+num_list = [1, 2, 3, 4, 5]
+print(type(num_list))
+# 列表转元组
+num_tuple = tuple(num_list)
+print(num_tuple)
+print(type(num_tuple))
+# 元组转列表
+nums_list = list(num_tuple)
+print(type(nums_list))
+# 列表可以修改
+nums_list.append(1)
+print(nums_list)
+# 元组转列表
+nums_tuple = tuple(nums_list)
+print(type(nums_tuple))
+print(nums_tuple)
+
+_________________________________________________________________________________
