@@ -55,13 +55,56 @@ print(hello_str.find("o w"))
 print(hello_str.replace("world", "python"))
 print(hello_str)
 ——————————————————————————————————————————————————————————————————————————
+
 # 顺序居中对齐输出以下内容
 poem = ["登鹳雀楼",
         "王之涣",
-        "白日依山尽",
-        "黄河入海流",
-        "欲穷千里目",
-        "更上一层楼"]
+        "白日依山尽  ",
+        "  黄河入海流",
+        "欲穷千里目  ",
+        "  更上一层楼"]
 for poem_str in poem:
 
-    print("|%s|" % poem_str.center(120 " "))
+    poem = poem_str.strip()
+    print("|%s|" % poem.center(12, " "))
+——————————————————————————————————————————————————————————————————————————————
+# 假设：以下内容是从网络上抓取的
+# 要求：
+# 1.将字符串中的空白字符全部去掉着
+# 2.再使用"”作为分隔符，拼接成一个整齐的字符串
+poem_str = "登鹳雀楼\t\n 王之换\t\t 白日依山尽 \n黄河入海流\t  欲穷千里目\t\n更上一层楼"
+print(poem_str)
+# 1拆分字符串
+poem_list = poem_str.split()
+print(poem_list)
+# 2 合并字符串
+poem_spcae = " ".join(poem_list)
+print(poem_spcae)
+
+ ————————————————————————————————————————————————————————————————————————————————
+# 字符串切片
+list = "0123456789"
+print(len(list))
+print(list[-2::])
+# 倒序输出
+print(list[::-1])
+
+——————————————————————————————————————————————————————————————————————————————————
+# 查找某名学生是否在名单内，使用完整for循环，if、else以及 break
+students = [
+    {"name": "阿土",
+     "age": "18",
+     "height": "181"},
+    {"name": "小美",
+     "age": "19",
+     "height": "161"}
+]
+find_name = input("输入要查找学生姓名：")
+for f_name in students:
+
+    if f_name["name"] == find_name:
+        print(f'{find_name}在学生名单内，具体信息为{f_name}')
+        break
+
+else:
+    print(f'{find_name}不在学生名单内')
