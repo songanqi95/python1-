@@ -1,0 +1,32 @@
+# 字典
+xingming_dict = {"name": "小明",
+            "age": 25,
+            "gender": True,
+            "height": 1.81}
+print(xingming_dict)
+# 取值
+print(xingming_dict["name"])
+# 增加/修改
+# key存在就修改键值对，key不存在就增加键值对
+xingming_dict["weight"] = 75
+print(xingming_dict)
+xingming_dict["age"] = 24
+print(xingming_dict)
+# 删除
+xingming_dict.pop("age")
+print(xingming_dict)
+# 统计键值对数量
+print(len(xingming_dict))
+# 合并字典
+# 键重复会覆盖
+shangming_dict = {"length": 15,
+                  "name": "mingming"}
+print(xingming_dict)
+xingming_dict.update(shangming_dict)
+print(xingming_dict)
+# 清空字典
+# xingming_dict.clear()
+# print(xingming_dict)
+# kkk是每次循环中，获取的键值对的key
+for kkk in xingming_dict:
+    print(f'{kkk} - {xingming_dict[kkk]}')
