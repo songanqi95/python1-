@@ -30,3 +30,38 @@ print(xingming_dict)
 # kkk是每次循环中，获取的键值对的key
 for kkk in xingming_dict:
     print(f'{kkk} - {xingming_dict[kkk]}')
+——————————————————————————————————————————————————————————————
+# 1.判断空白字符（是否仅包含空白字符）
+space_str = "     \t\n\r"
+print(space_str.isspace())
+# 2.判断字符串是否只包含数字
+num_str = "1一①"
+print(num_str)
+# 全角数字、最常用
+print(num_str.isdecimal())
+# 全角数字、（1）、\u00b22
+print(num_str.isdigit())
+# 全角数字、汉字数字
+print(num_str.isnumeric())
+hello_str = "hello world"
+# 1.判断是否指定字符串开始
+print(hello_str.startswith("he"))
+# 2.判断是否指定字符串结束
+print(hello_str.endswith("ld"))
+# 3.查找指定字符串（find不报错，会返回-1）
+print(hello_str.find("o w"))
+# 4.替换字符串（replace不会修改原有字符串内筒）
+# reolace会返回一个新的字符串
+print(hello_str.replace("world", "python"))
+print(hello_str)
+——————————————————————————————————————————————————————————————————————————
+# 顺序居中对齐输出以下内容
+poem = ["登鹳雀楼",
+        "王之涣",
+        "白日依山尽",
+        "黄河入海流",
+        "欲穷千里目",
+        "更上一层楼"]
+for poem_str in poem:
+
+    print("|%s|" % poem_str.center(120 " "))
