@@ -1,0 +1,104 @@
+# card_main 
+_____________________________________________
+import cards_tools
+# 执行无限循环
+while True:
+    cards_tools.show_menu()
+    action_str = input(f'请选择操作功能：')
+    print(f'您选择的操作为【{action_str}】')
+    if action_str == "1":
+        cards_tools.new_card()
+
+    elif action_str == "2":
+        cards_tools.show_all()
+    elif action_str == "3":
+        cards_tools.search_card()
+    elif action_str == "0":
+        print("感谢使用【名片管理系统】")
+        break
+    else:
+        print("输入错误，请重新输入")
+____________________________________________
+# card_tools
+____________________________________________
+# card_list = [{"name": "张三", "tel": "33", "QQ": "110", "email": "3313 "},
+#              {"name": "李四", "tel": "444", "QQ": "120", "email": "404 "},
+#              {"name": "王五", "tel": "555", "QQ": "119", "email": "5555 "}]
+card_list = []
+
+
+def show_menu():
+
+    print("*" * 50)
+    print("欢迎使用【名片管理系统】v1.0")
+    print("\n【1】新建名片\n【2】显示全部\n【3】查询名片\n\n【0】退出系统")
+    print("*" * 50)
+
+
+def new_card():
+    
+    print("-" * 50)
+    print("新增名片")
+    # 1.提示用户输入名片的详细信息
+    name_str = input("请输入用户名字：")
+    tel_str = input("请输入用户电话：")
+    qq_str = input("请输入用户QQ：")
+    email_str = input("请输入用户邮箱：")
+    # 2.使用输入信息建立名片字典
+    card_dict = {"name": name_str, "tel": tel_str, "QQ": qq_str, "email": email_str}
+    # 3.将字典添加到列表中
+    card_list.append(card_dict)
+    print(card_dict)
+    # 4.提示用户添加成功
+    print(f'添加{name_str}成功')
+
+
+def show_all():
+   
+   print("-" * 50)
+    print("显示全部")
+
+    # 判断是否存在名片记录，如果没有，提示用户并返回
+    list_num = len(card_list)
+    if list_num == 0:
+        print("不存在名片记录,请添加名片")
+        return
+    # 打印表头
+    for name in ["姓名", "电话", "QQ", "邮箱"]:
+        print(name, end="\t\t\t")
+    print("")
+    # 打印分隔线
+    print("=" * 50)
+    # 遍历列表输出字典信息
+    for card_dict in card_list:
+        
+        print(f'{card_dict["name"]}\t\t\t{card_dict["tel"]}\t\t\t{card_dict["QQ"]}'
+              f'\t\t\t{card_dict["email"]}')
+       
+       # 另一种写法
+       # print("%s\t\t%s\t\t%s\t\t%s" % (card_dict["name"], card_dict["tel"], card_dict["QQ"], card_dict["email"]))
+    print("")
+
+
+def search_card():
+   
+   print("-" * 50)
+    print("搜索名片")
+    search_name = input("请输入需要查询人姓名：")
+    for card_dict in card_list:
+        if card_dict["name"] == search_name:
+            for name in ["姓名", "电话", "QQ", "邮箱"]:
+                print(name, end="\t\t\t")
+            print("")
+            # 打印分隔线
+            print("=" * 50)
+            print(f'{card_dict["name"]}\t\t\t{card_dict["tel"]}\t\t\t'
+                  f'{card_dict["QQ"]}\t\t\t{card_dict["email"]}')
+            return
+        else:
+            print(f'不存在{search_name}，请重新输入')
+            return
+
+
+
+
