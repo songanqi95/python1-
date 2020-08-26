@@ -94,10 +94,15 @@ def search_card():
             print("=" * 50)
             print(f'{card_dict["name"]}\t\t\t{card_dict["tel"]}\t\t\t'
                   f'{card_dict["QQ"]}\t\t\t{card_dict["email"]}')
-            return
+            break
         else:
             print(f'不存在{search_name}，请重新输入')
-            return
+            break
+
+
+def deal_card(find_card):
+    print(find_card)
+    action_str = input("请选择要执行的操作 1 修改 2 删除 0 返回上级菜单")
 
 
 
