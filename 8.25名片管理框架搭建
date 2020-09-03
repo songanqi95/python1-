@@ -21,10 +21,10 @@ while True:
 ____________________________________________
 # card_tools
 ____________________________________________
-# card_list = [{"name": "张三", "tel": "33", "QQ": "110", "email": "3313 "},
-#              {"name": "李四", "tel": "444", "QQ": "120", "email": "404 "},
-#              {"name": "王五", "tel": "555", "QQ": "119", "email": "5555 "}]
-card_list = []
+card_list = [{"name": "张三", "tel": "33", "QQ": "110", "email": "3313 "},
+             {"name": "李四", "tel": "444", "QQ": "120", "email": "404 "},
+             {"name": "王五", "tel": "555", "QQ": "119", "email": "5555 "}]
+# card_list = []
 
 
 def show_menu():
@@ -36,7 +36,6 @@ def show_menu():
 
 
 def new_card():
-    
     print("-" * 50)
     print("新增名片")
     # 1.提示用户输入名片的详细信息
@@ -54,8 +53,7 @@ def new_card():
 
 
 def show_all():
-   
-   print("-" * 50)
+    print("-" * 50)
     print("显示全部")
 
     # 判断是否存在名片记录，如果没有，提示用户并返回
@@ -71,18 +69,15 @@ def show_all():
     print("=" * 50)
     # 遍历列表输出字典信息
     for card_dict in card_list:
-        
         print(f'{card_dict["name"]}\t\t\t{card_dict["tel"]}\t\t\t{card_dict["QQ"]}'
               f'\t\t\t{card_dict["email"]}')
-       
-       # 另一种写法
-       # print("%s\t\t%s\t\t%s\t\t%s" % (card_dict["name"], card_dict["tel"], card_dict["QQ"], card_dict["email"]))
+        # 另一种写法
+        # print("%s\t\t%s\t\t%s\t\t%s" % (card_dict["name"], card_dict["tel"], card_dict["QQ"], card_dict["email"]))
     print("")
 
 
 def search_card():
-   
-   print("-" * 50)
+    print("-" * 50)
     print("搜索名片")
     search_name = input("请输入需要查询人姓名：")
     for card_dict in card_list:
@@ -94,16 +89,24 @@ def search_card():
             print("=" * 50)
             print(f'{card_dict["name"]}\t\t\t{card_dict["tel"]}\t\t\t'
                   f'{card_dict["QQ"]}\t\t\t{card_dict["email"]}')
+            deal_card(card_dict)
             break
-        else:
-            print(f'不存在{search_name}，请重新输入')
-            break
+    else:
+        print(f'不存在{search_name}，请重新输入')
 
 
 def deal_card(find_card):
     print(find_card)
-    action_str = input("请选择要执行的操作 1 修改 2 删除 0 返回上级菜单")
+    action_str = input("请选择要执行的操作 【1】 修改 【2】 删除 【0】 返回上级菜单:")
 
-
+    if action_str == "1":
+        find_card["name"] = input("请输入用户名字：")
+        find_card["tel"] = input("请输入用户电话：")
+        find_card["QQ"] = input("请输入用户QQ：")
+        find_card["email"] = input("请输入用户邮箱：")
+        print("修改名片成功")
+    elif action_str == "2":
+        card_list.remove(find_card)
+        print("删除名片成功")
 
 
