@@ -1,0 +1,22 @@
+num = 1
+
+
+def demo1():
+
+    num = 10
+    print(f'num == {num}')
+
+
+def demo2():
+    print(f'num == {num}')
+
+
+def demo3():
+    global num
+    num = 20
+
+
+demo1()
+demo2()
+demo3()
+demo2()
