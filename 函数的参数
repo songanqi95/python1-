@@ -1,0 +1,12 @@
+def demo(name,name_list):
+    name = 123
+    name_list = [1, 2, 3]
+    print(name)
+    print(name_list)
+
+# 函数的内部，针对参数使用赋值语句，不会修改外部的实参变量
+gl_name = 6
+gl_name_list = [4, 5, 6]
+demo(gl_name,gl_name_list)
+print(gl_name)
+print(gl_name_list)
