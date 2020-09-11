@@ -1,0 +1,30 @@
+def measure():
+    print("开始测量")
+    print("测量结束")
+    temp = 19
+    wet = 58
+
+    return temp, wet
+
+
+result = measure()
+print(result)
+gl_temp, gl_wet = measure()
+print(gl_temp)
+print(gl_wet)
+print(result[1])
+print(result[0])
+——————————————————————————————————————————————————————————————————
+a = 100
+b = 6
+# 不使用其他变量，交换ab
+# 方法一
+a = a + b
+b = a - b
+a = a - b
+print(a)
+print(b)
+# 方法二
+a, b = (a, b)
+print(a)
+print(b)
