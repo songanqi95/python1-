@@ -50,3 +50,14 @@ def print_info(name, title="", gender=True):
 
 print_info("小明", "班长")
 print_info("小红", gender=False)
+________________________________________________
+def sum_numbers(*args):
+    num = 0
+    print(args)
+    for n in args:
+        num += n
+    return num
+
+
+result = sum_numbers(1, 2, 3, 4, 5)
+print(result)
