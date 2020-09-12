@@ -21,3 +21,32 @@ gl_name_list = [1, 2, 3]
 demo(gl_name_list)
 print(gl_name_list)
 ——————————————————————————————————————————
+# 缺省参数，默认正序排列
+gl_list = [1, 9, 3]
+# 倒序排列
+gl_list.sort(reverse=True)
+print(gl_list)
+# 正序排列，reverse默认值为False
+gl_list.sort()
+print(gl_list)
+______________________________________________
+# 指定函数的缺省参数
+# 缺省参数放在末尾
+
+def print_info(name, title="", gender=True):
+    """
+
+    :param title: 职位
+    :param name: 班上同学的姓名
+    :param gender:True男生 False女生
+    """
+
+    gender_text = "男生"
+    if not gender:
+        gender_text = "女生"
+
+    print(f'[{title}]{name}是{gender_text}')
+
+
+print_info("小明", "班长")
+print_info("小红", gender=False)
