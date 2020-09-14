@@ -7,3 +7,13 @@ def sum_number(num):
 
 
 sum_number(5)
+——————————————————————————————————————————————————
+def sum_number(num):
+    if num == 1:
+        return 1
+    temp = sum_number(num - 1)
+    return temp + num
+
+
+print(sum_number(100))
+——————————————————————————————————————————————————————
