@@ -51,3 +51,20 @@ print(lazy_cat)
 
 lazy_cat2 = lazy_cat
 print(lazy_cat2)
+________________________________________
+class Cat:
+    def __init__(self, new_name):
+        self.name = new_name
+        print(f'{self.name}来了')
+
+    def __del__(self):
+        print(f'{self.name}去了')
+
+    def __str__(self):
+
+        return f'我是小猫{self.name}'
+
+
+tom = Cat("tom")
+print(tom)
+
