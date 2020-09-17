@@ -1,0 +1,30 @@
+class Person:
+    def __init__(self, name, weight):
+
+        self.name = name
+        self.weight = weight
+        print(f'{self.name}的初始体重为{self.weight}')
+
+    def __str__(self):
+
+        return f'我是{self.name}，现在的体重是{self.weight}'
+
+    def run(self):
+        self.weight -= 0.5
+        print("%s通过运动，体重减少0.5公斤" % self.name)
+
+    def eat(self):
+        self.weight += 1
+        print("%s因为过度饮食，体重增加1.0公斤" % self.name)
+
+
+xiaoming = Person("小明", 75.0)
+xiaomei = Person("小美", 45.0)
+xiaoming.run()
+xiaoming.eat()
+xiaomei.run()
+xiaomei.eat()
+xiaomei.eat()
+
+print(xiaoming)
+print(xiaomei)
