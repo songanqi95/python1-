@@ -45,3 +45,29 @@ xtq.drink()
 xtq.bark()
 xtq.fly()
 maomao.catch()
+_______________________________________________________________
+class A:
+    def test(self):
+        print("111")
+
+    def demo(self):
+        print("222")
+
+
+class B:
+    def test(self):
+        print("333")
+
+    def demo(self):
+        print("444")
+
+
+class C(A, B):
+
+    pass
+
+
+hhh = C()
+hhh.demo()
+hhh.test()
+print(C.__mro__)
