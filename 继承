@@ -1,4 +1,4 @@
-class Animal:
+class Animal():
 
     def eat(self):
         print("吃")
@@ -30,11 +30,18 @@ class Xiaotianquan(Dog):
     def fly(self):
         print("飞")
 
+    # 覆盖父类的方法
+    def bark(self):
+        print("biubiubiu~")
+        # 使用super()，调用原本在父类中的代码
+        super().bark()
+        print("歪比巴卜")
+
 
 maomao = Cat()
-wangcai = Xiaotianquan()
-wangcai.eat()
-wangcai.drink()
-wangcai.bark()
-wangcai.fly()
+xtq = Xiaotianquan()
+xtq.eat()
+xtq.drink()
+xtq.bark()
+xtq.fly()
 maomao.catch()
